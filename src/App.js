@@ -1,25 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Instruction from "./Components/Instruction/Instruction"
+import TextBlocks from "./Components/TextBlocks/TextBlocks"
 
-class App extends Component {
-  render() {
+  
+
+class App extends React.Component {
+  state = {
+    data: []
+  }
+
+  render() { //between render and return here is the place to put the consts
+   
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="App" style={{backgroundColor: "grey", width:"100%", marginTop: "-10px", height: "100vh"}}>
+         
+        <Instruction/>
+        <TextBlocks/>
       </div>
     );
   }
